@@ -1,4 +1,4 @@
-# STEAM Who? (SteamAkinator) 🧠💻
+# STEAM Who? - L'Indovina Chi delle Scienze🧠💻
 
 ## 📖 Introduzione
 **STEAM Who?** è un'applicazione web interattiva, ispirata al celebre gioco da tavolo "Indovina Chi?", progettata per far scoprire e valorizzare 20 figure storiche di spicco nei campi **STEAM** (Scienza, Tecnologia, Ingegneria, Arte e Matematica).
