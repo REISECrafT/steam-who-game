@@ -4,12 +4,13 @@
 **STEAM Who?** è un'applicazione web interattiva, ispirata al celebre gioco da tavolo "Indovina Chi?", progettata per far scoprire e valorizzare 20 figure storiche di spicco nei campi **STEAM** (Scienza, Tecnologia, Ingegneria, Arte e Matematica).
 
 ## 📊 Analisi Matematica e Complessità Computazionale
-Il punto di forza tecnico del progetto risiede nella sua efficienza algoritmica. Il motore di gioco non si basa su controlli casuali, ma su una struttura dati ad **Albero Decisionale Binario** (dove ogni risposta può essere solo SÌ o NO).
+Il punto di forza tecnico del progetto risiede nella sua efficienza algoritmica. Il motore di gioco non effettua controlli casuali o tentativi isolati, ma si basa su una struttura logica organizzata ad **Albero Decisionale Binario**, in cui ogni risposta fornita dall'utente può essere esclusivamente SÌ o NO.
 
-L'algoritmo opera con una complessità computazionale temporale pari a **O(log₂ N)**, dove *N* rappresenta il numero di elementi nel database. 
-Dato il dominio fisso composto da **esattamente N = 20 personaggi**, l'altezza massima dell'albero (ovvero il numero massimo di domande necessarie nel caso peggiore per indovinare il personaggio) è calcolata tramite la funzione logaritmica intera superiore:
+Questo approccio permette al sistema di funzionare per esclusione progressiva:
+* Ogni scelta dell'utente permette di scartare istantaneamente interi gruppi di candidati che non rispecchiano la caratteristica confermata.
+* Gestendo un database composto da **esattamente 20 personaggi**, l'albero delle domande è stato sviluppato in modo bilanciato per ottimizzare ogni bivio logico.
 
-$$\text{Altezza Albero} = \lceil \log_2(20) \rceil = 5 \text{ domande}$$
+Grazie a questa precisa impostazione della struttura dati, il sistema **garantisce matematicamente di individuare il personaggio pensato in un massimo assoluto di 5 domande**. Il campo di ricerca viene ristretto così rapidamente da azzerare i passaggi ridondanti, assicurando un'esperienza di gioco fluida, logica e immediata.
 
 ### Perché proprio 5 domande?
 * Con 4 domande è possibile distinguere al massimo $2^4 = 16$ scenari (insufficienti per i nostri 20 personaggi).
