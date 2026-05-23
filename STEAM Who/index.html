@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEAM Who? - Indovina Chi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <h1>STEAM Who?</h1>
+    
+    <div id="main-layout">
+        
+        <div id="game-container">
+            <p id="instruction">Pensa a un personaggio della tabella e rispondi alle domande!</p>
+
+            <div id="question-box">
+                <h2 id="question-text">Sei pronto a giocare?</h2>
+                <div id="buttons">
+                    <button id="btn-start" onclick="startGame()">INIZIA</button>
+                    <button id="btn-yes" class="hidden" onclick="handleResponse(true)">SÌ</button>
+                    <button id="btn-no" class="hidden" onclick="handleResponse(false)">NO</button>
+                </div>
+            </div>
+
+            <div id="result-box" class="hidden">
+                <h2 id="winner-name"></h2>
+                <img id="winner-img" src="" alt="Vincitore">
+                <br>
+                <button onclick="location.reload()">Gioca ancora</button>
+            </div>
+        </div>
+
+        <div id="table-section">
+            <h3>I 20 Personaggi</h3>
+            <table>
+                <tr>
+                    <td><img src="img/mary_jackson.jpg" class="char-thumb"><p class="char-name">Mary Jackson</p></td>
+                    <td><img src="img/dorothy_vaughan.jpg" class="char-thumb"><p class="char-name">Dorothy Vaughan</p></td>
+                    <td><img src="img/katherine_johnson.jpg" class="char-thumb"><p class="char-name">Katherine Johnson</p></td>
+                    <td><img src="img/wangari_maathai.jpg" class="char-thumb"><p class="char-name">Wangari Maathai</p></td>
+                    <td><img src="img/alice_ball.jpg" class="char-thumb"><p class="char-name">Alice Ball</p></td>
+                </tr>
+                <tr>
+                    <td><img src="img/hedy_lamarr.jpg" class="char-thumb"><p class="char-name">Hedy Lamarr</p></td>
+                    <td><img src="img/rosalind_franklin.jpg" class="char-thumb"><p class="char-name">Rosalind Franklin</p></td>
+                    <td><img src="img/artemisia_gentileschi.jpg" class="char-thumb"><p class="char-name">Artemisia Gentileschi</p></td>
+                    <td><img src="img/marie_curie.jpg" class="char-thumb"><p class="char-name">Marie Curie</p></td>
+                    <td><img src="img/ada_lovelace.jpg" class="char-thumb"><p class="char-name">Ada Lovelace</p></td>
+                </tr>
+                <tr>
+                    <td><img src="img/jean_michel_basquiat.jpg" class="char-thumb"><p class="char-name">Jean-Michel Basquiat</p></td>
+                    <td><img src="img/benjamin_banneker.jpg" class="char-thumb"><p class="char-name">Benjamin Banneker</p></td>
+                    <td><img src="img/percy_julian.jpg" class="char-thumb"><p class="char-name">Percy Julian</p></td>
+                    <td><img src="img/george_w_carver.jpg" class="char-thumb"><p class="char-name">George W. Carver</p></td>
+                    <td><img src="img/david_blackwell.jpg" class="char-thumb"><p class="char-name">David Blackwell</p></td>
+                </tr>
+                <tr>
+                    <td><img src="img/leonardo_da_vinci.jpg" class="char-thumb"><p class="char-name">Leonardo da Vinci</p></td>
+                    <td><img src="img/galileo_galilei.jpg" class="char-thumb"><p class="char-name">Galileo Galilei</p></td>
+                    <td><img src="img/isaac_newton.jpg" class="char-thumb"><p class="char-name">Isaac Newton</p></td>
+                    <td><img src="img/alan_turing.jpg" class="char-thumb"><p class="char-name">Alan Turing</p></td>
+                    <td><img src="img/albert_einstein.jpg" class="char-thumb"><p class="char-name">Albert Einstein</p></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

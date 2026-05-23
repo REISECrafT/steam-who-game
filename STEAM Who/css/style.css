@@ -1,0 +1,95 @@
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #f4f7f6; 
+    text-align: center; 
+    padding: 20px;
+    margin: 0;
+}
+
+h1 { color: #2c3e50; }
+
+#main-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#game-container { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
+    width: 100%;
+}
+
+#table-section {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #eee;
+    padding: 10px;
+    width: 20%;
+    transition: all 0.5s ease; /* Transizione fluida per lo schiarimento */
+}
+
+.char-thumb {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #3498db;
+}
+
+.char-name {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+/* EFFETTO SCHIARIMENTO (Personaggi scartati) */
+.eliminated {
+    opacity: 0.15; /* Molto trasparente */
+    filter: grayscale(100%) blur(1px); /* Bianco e nero + leggero sfuocato */
+    transform: scale(0.9); /* Leggermente più piccoli */
+}
+
+/* BOTTONI */
+button { 
+    padding: 12px 24px; 
+    font-size: 1rem; 
+    cursor: pointer; 
+    border-radius: 8px; 
+    border: none; 
+    margin: 10px; 
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover { opacity: 0.9; transform: translateY(-2px); }
+
+#btn-start { background: #3498db; color: white; }
+#btn-yes { background: #2ecc71; color: white; }
+#btn-no { background: #e74c3c; color: white; }
+.hidden { display: none !important; }
+
+#winner-img { 
+    width: 180px; 
+    height: 180px;
+    border-radius: 15px; 
+    margin-top: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
